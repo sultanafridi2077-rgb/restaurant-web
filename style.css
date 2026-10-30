@@ -1,0 +1,391 @@
+
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9bd6f;
+    color: #333;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =========================
+   HEADER AND NAVBAR
+========================= */
+
+header {
+    width: 100%;
+}
+
+nav {
+    background: #19452f;
+    color: white;
+    padding: 15px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav a:hover,
+nav a.active {
+    background: #b55a0f;
+    border-radius: 5px;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    padding: 50px 7%;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.hero-content,
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    color: #19452f;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.badge {
+    background: #e8893c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #842a01;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #fc7406;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 25px;
+    padding: 30px 5%;
+}
+
+.content {
+    min-width: 0;
+}
+
+aside {
+    background: rgb(162, 230, 141);
+    padding: 20px;
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+aside h2,
+aside h3 {
+    color: #19452f;
+    margin-bottom: 10px;
+}
+
+aside p {
+    margin-bottom: 12px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h2 {
+    color: #19452f;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   FOOD CARDS - GRID
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: rgb(164, 235, 156);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #ddd;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #045a0a;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card h3 {
+    color: #19452f;
+    margin: 8px 0;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.card button {
+    background: #19452f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.new {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: #e8893c;
+    color: white;
+    padding: 3px 8px;
+    font-size: 12px;
+}
+
+/* =========================
+   OWNER PHOTO
+========================= */
+
+.owner {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   GALLERY - GRID
+========================= */
+
+
+
+/* =========================
+   CUSTOMER REVIEWS - GRID
+========================= */
+
+.reviews {
+    display: grid;
+    
+    gap: 12px;
+}
+
+.reviews p {
+    background: white;
+    padding: 15px;
+    border-left: 4px solid #e8893c;
+    box-shadow: 0 2px 6px #ddd;
+}
+
+/* =========================
+   FOOTER - FLEXBOX
+========================= */
+
+footer {
+    background: #19452f;
+    color: white;
+    padding: 30px 5%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+}
+
+.footer-content > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    color: #ffc28b;
+}
+
+footer a {
+    display: inline-block;
+    color: rgb(249, 248, 248);
+    margin-right: 8px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffc28b;
+}
+
+.copyright {
+    width: 100%;
+    border-top: 1px solid #66816e;
+    padding-top: 15px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+   768px to 991px
+========================= */
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .layout {
+        grid-template-columns: 180px 1fr;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   Below 768px
+========================= */
+
+@media (max-width: 767px) {
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 30px 5%;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero img {
+        height: 250px;
+    }
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: static;
+    }
+
+    .cards,
+    .gallery,
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery img {
+        height: 200px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+}
